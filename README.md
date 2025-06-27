@@ -31,22 +31,15 @@ cd quiz-wpp
 npm install
 ```
 
-3. **(Opcional) Configure a chave da API Gemini**
+3. **Edite a chave da API Gemini**
 
-O bot funciona mesmo sem a chave, mas as perguntas podem ser menos criativas. Para usar a API Gemini, defina a variável de ambiente `GOOGLE_API_KEY` com sua chave:
-
-No Windows PowerShell:
-```powershell
-$env:GOOGLE_API_KEY="SuaChaveAqui"
-node bot.js
+Abra o arquivo `bot.js` e altere o valor da chave na linha:
+```js
+const genAI = new GoogleGenerativeAI(process.env.GOOGLE_API_KEY || 'SUA_CHAVE_AQUI');
 ```
-No Linux/Mac:
-```bash
-export GOOGLE_API_KEY=SuaChaveAqui
-node bot.js
-```
+Coloque sua chave da API Gemini no lugar de `'SUA_CHAVE_AQUI'`.
 
-Se não definir a chave, o bot tentará rodar com o modo padrão.
+Se não tiver uma chave, o bot ainda funciona, mas as perguntas podem ser menos criativas.
 
 4. **Adicione a imagem de boas-vindas**
 
