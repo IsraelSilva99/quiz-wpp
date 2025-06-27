@@ -31,13 +31,22 @@ cd quiz-wpp
 npm install
 ```
 
-3. **Configure a API do Gemini**
+3. **(Opcional) Configure a chave da API Gemini**
 
-Crie um arquivo `.env` na raiz com sua chave:
+O bot funciona mesmo sem a chave, mas as perguntas podem ser menos criativas. Para usar a API Gemini, defina a variável de ambiente `GOOGLE_API_KEY` com sua chave:
 
+No Windows PowerShell:
+```powershell
+$env:GOOGLE_API_KEY="SuaChaveAqui"
+node bot.js
 ```
-GOOGLE_API_KEY=SuaChaveAqui
+No Linux/Mac:
+```bash
+export GOOGLE_API_KEY=SuaChaveAqui
+node bot.js
 ```
+
+Se não definir a chave, o bot tentará rodar com o modo padrão.
 
 4. **Adicione a imagem de boas-vindas**
 
