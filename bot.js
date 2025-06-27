@@ -5,9 +5,9 @@ const sqlite3 = require('sqlite3').verbose();
 const fs = require('fs');
 
 // Configuração da API do Gemini
-const genAI = new GoogleGenerativeAI(process.env.GOOGLE_API_KEY || 'AIzaSyAhdKkiDpqXf0pk7bxjCx1vSyAKVs0vhdY');
+const genAI = new GoogleGenerativeAI(process.env.GOOGLE_API_KEY || 'SUA-CHAVE-AQUI!!!!!!!!!!!!');
 const model = genAI.getGenerativeModel({
-  model: 'gemini-2.0-flash', // Se continuar falhando, tente 'gemini-1.5-pro'
+  model: 'gemini-2.0-flash',
   generationConfig: { temperature: 0.8, maxOutputTokens: 500 }
 });
 
